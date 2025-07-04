@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kuis Bab 4: Etika dan Praktik AI dalam Bahan Ajar</title>
+  <style>
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #eef6fb; margin: 2rem; }
+    .container { background-color: #ffffff; padding: 2.5rem; border-radius: 12px; max-width: 720px; margin: auto; box-shadow: 0 4px 12px rgba(0, 123, 255, 0.1); }
+    h1, h2, h3 { text-align: center; color: #004085; }
+    .question-block { margin-bottom: 2rem; }
+    .question { margin: 1rem 0; font-weight: 500; color: #003366; }
+    .option-button {
+        display: block;
+        width: 100%;
+        padding: 0.75rem;
+        margin: 0.4rem 0;
+        font-size: 1rem;
+        border: 1px solid #b8daff;
+        border-radius: 8px;
+        background-color: #d6efff;
+        color: #004085;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+    }
+    .option-button:hover {
+        background-color: #c2e0ff;
+        border-color: #66b3ff;
+    }
+    .feedback {
+        margin-top: 0.5rem;
+        padding: 0.75rem;
+        background-color: #e2f0fb;
+        border-left: 4px solid #007BFF;
+        border-radius: 5px;
+        font-size: 0.95rem;
+        color: #004085;
+    }
+    .score {
+        text-align: center;
+        font-size: 1.25rem;
+        font-weight: bold;
+        margin-top: 2rem;
+        color: #155724;
+    }
+    .submit-button {
+        background-color: #007BFF;
+        color: white;
+        padding: 1rem;
+        border: none;
+        border-radius: 8px;
+        font-size: 1rem;
+        cursor: pointer;
+        width: 100%;
+        margin-top: 1rem;
+        transition: background-color 0.2s ease-in-out;
+    }
+    .submit-button:hover {
+        background-color: #0056b3;
+    }
+</style>
+</head>
+<body>
+  <div class="container">
+    <h1>Kuis Bab 4: Etika dan Praktik AI dalam Bahan Ajar</h1>
+    
+        <div class="question-block">
+            <h3>Pertanyaan:</h3>
+            <p class="question">Apa fitur AI dari Canva yang dapat membantu guru membuat ilustrasi dari teks?</p>
+            <button class="option-button" onclick="showFeedback('0', 'wrong', '0')">A. Magic Write</button>
+<button class="option-button" onclick="showFeedback('0', 'wrong', '0')">B. Magic Resize</button>
+<button class="option-button" onclick="showFeedback('0', 'correct', '0')">C. Text to Image</button>
+<button class="option-button" onclick="showFeedback('0', 'wrong', '0')">D. Auto Presentation</button>
+
+            <div class="feedback" id="feedback_0"></div>
+        </div>
+        
+        <div class="question-block">
+            <h3>Pertanyaan:</h3>
+            <p class="question">Apa prinsip etis yang harus diperhatikan guru saat menggunakan AI?</p>
+            <button class="option-button" onclick="showFeedback('1', 'wrong', '1')">A. Langsung percaya hasil AI tanpa tinjauan.</button>
+<button class="option-button" onclick="showFeedback('1', 'wrong', '1')">B. Menyalin semua hasil AI dan mengaku sebagai buatan sendiri.</button>
+<button class="option-button" onclick="showFeedback('1', 'correct', '1')">C. Menggunakan AI sebagai alat bantu dengan tetap mengutamakan konteks dan etika.</button>
+<button class="option-button" onclick="showFeedback('1', 'wrong', '1')">D. Hanya menggunakan AI untuk soal pilihan ganda.</button>
+
+            <div class="feedback" id="feedback_1"></div>
+        </div>
+        
+    <button class="submit-button" onclick="showScore()">Lihat Nilai</button>
+    <div class="score" id="score"></div>
+  </div>
+  <script>
+    let correctAnswers = new Set();
+    function showFeedback(id, answer, questionId) {
+      const feedbackDiv = document.getElementById('feedback_' + id);
+      if(answer === 'correct') {
+        feedbackDiv.innerHTML = `<strong>Benar!</strong> Jawaban kamu tepat.`;
+        correctAnswers.add(questionId);
+      } else {
+        feedbackDiv.innerHTML = `<strong>Kurang tepat.</strong> Coba baca kembali bagian terkait di modul.`;
+        correctAnswers.delete(questionId);
+      }
+    }
+    function showScore() {
+      const score = (correctAnswers.size / 2 * 100).toFixed(0);
+      document.getElementById('score').innerText = `Nilai kamu: ${score} dari 100`;
+    }
+  </script>
+</body>
+</html>
