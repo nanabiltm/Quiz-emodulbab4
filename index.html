@@ -3,128 +3,125 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kuis Bab 3 – AI Tools untuk Guru SD</title>
+  <title>Kuis Bab 4 – Langkah Praktis</title>
   <style>
-    /* CSS Styling */
-    body { font-family: sans-serif; margin:0; padding:20px; background:#f9f9f9; }
-    h2 { text-align:center; margin-bottom:10px; }
-    p.intro { text-align:center; font-size:0.95rem; margin-bottom:20px; }
-    .quiz-container { max-width:600px; margin:0 auto; background:#fff; padding:20px; border-radius:5px; box-shadow:0 0 10px rgba(0,0,0,0.1); }
-    .question { display:none; }
-    .question.active { display:block; }
-    .question h3 { margin-top:0; font-size:1.1rem; color:#333; }
-    .question-text { font-weight:bold; margin:15px 0; }
-    ul.options { list-style:none; padding:0; margin:0; }
-    ul.options li { margin:8px 0; }
-    ul.options label { cursor:pointer; }
-    ul.options input[type="radio"] { margin-right:8px; }
-    .btn-container { margin-top:15px; display:flex; justify-content:space-between; }
-    .btn-container button { padding:8px 16px; font:inherit; cursor:pointer; border:none; border-radius:4px; }
-    .submitBtn { background-color:#4CAF50; color:white; }
-    .nextBtn, .backBtn { background-color:#2196F3; color:white; }
-    .backBtn { visibility:hidden; }
-    button:disabled { opacity:0.6; cursor:not-allowed; }
-    .explanation { margin-top:10px; padding:10px; background:#ffefef; border-left:4px solid #e53935; }
-    .explanation strong { color:#e53935; }
-    #result { display:none; max-width:600px; margin:20px auto; background:#fff; padding:20px; border-radius:5px; box-shadow:0 0 10px rgba(0,0,0,0.1); }
-    #result h3 { font-size:1.2rem; color:#333; text-align:center; }
-    #result p { font-size:1rem; }
-    #summary { margin-top:10px; padding-left:20px; }
-    #summary li { margin:5px 0; }
-    #sendBtn { display:none; margin-top:15px; padding:10px 20px; font-size:1rem; background:#25D366; color:white; border:none; border-radius:5px; cursor:pointer; }
-    @media(max-width:600px){ .btn-container{ flex-direction:column;} .btn-container button{ width:100%; margin:5px 0;} }
+    body{font-family:sans-serif;margin:0;padding:20px;background:#f9f9f9}
+    h2{text-align:center;margin-bottom:10px}
+    p.intro{text-align:center;font-size:.95rem;margin-bottom:20px}
+    .quiz-container{max-width:600px;margin:0 auto;background:#fff;padding:20px;border-radius:5px;box-shadow:0 0 10px rgba(0,0,0,.1)}
+    .question{display:none}
+    .question.active{display:block}
+    .question h3{margin-top:0;font-size:1.1rem;color:#333}
+    .question-text{font-weight:bold;margin:15px 0}
+    ul.options{list-style:none;padding:0;margin:0}
+    ul.options li{margin:8px 0}
+    ul.options label{cursor:pointer}
+    ul.options input[type=radio]{margin-right:8px}
+    .btn-container{margin-top:15px;display:flex;justify-content:space-between}
+    .btn-container button{padding:8px 16px;font:inherit;cursor:pointer;border:none;border-radius:4px}
+    .submitBtn{background:#4CAF50;color:#fff}
+    .nextBtn,.backBtn{background:#2196F3;color:#fff}
+    .backBtn{visibility:hidden}
+    button:disabled{opacity:.6;cursor:not-allowed}
+    .explanation{margin-top:10px;padding:10px;background:#ffefef;border-left:4px solid #e53935}
+    .explanation strong{color:#e53935}
+    #result{display:none;max-width:600px;margin:20px auto;background:#fff;padding:20px;border-radius:5px;box-shadow:0 0 10px rgba(0,0,0,.1)}
+    #result h3{text-align:center;font-size:1.2rem;color:#333}
+    #summary{margin-top:10px;padding-left:20px}
+    #summary li{margin:5px 0}
+    #sendBtn{display:none;margin-top:15px;padding:10px 20px;font-size:1rem;background:#25D366;color:#fff;border:none;border-radius:5px;cursor:pointer}
+    @media(max-width:600px){.btn-container{flex-direction:column}.btn-container button{width:100%;margin:5px 0}}
   </style>
 </head>
 <body>
 
 <div class="quiz-container">
-  <h2>Kuis Bab 3: AI Tools untuk Guru SD</h2>
+  <h2>Kuis Bab 4: Langkah Praktis AI</h2>
   <p class="intro">Jawablah pertanyaan berikut. Jika jawaban salah, akan muncul penjelasan singkat. Selamat mengerjakan!</p>
 
   <!-- Soal 1 -->
-  <div class="question active" id="question1">
+  <div class="question active" id="q1">
     <h3>Soal 1 dari 4</h3>
-    <p class="question-text">Apa keunggulan utama ChatGPT bagi guru SD?</p>
+    <p class="question-text">Langkah pertama sebelum menggunakan AI untuk merancang materi adalah …</p>
     <ul class="options">
-      <li><label><input type="radio" name="q1" value="A" data-correct="true"> Menghasilkan ide dan materi ajar secara cepat.</label></li>
-      <li><label><input type="radio" name="q1" value="B"> Menggantikan peran guru sepenuhnya.</label></li>
-      <li><label><input type="radio" name="q1" value="C"> Menyusun jadwal piket siswa.</label></li>
+      <li><label><input type="radio" name="a1" value="A" data-correct="true"> Menentukan tujuan & kompetensi pembelajaran.</label></li>
+      <li><label><input type="radio" name="a1" value="B"> Langsung menulis prompt acak.</label></li>
+      <li><label><input type="radio" name="a1" value="C"> Memilih warna template terlebih dahulu.</label></li>
     </ul>
     <div class="btn-container">
       <button class="backBtn">Kembali</button>
       <button class="submitBtn" onclick="checkAnswer()">Periksa Jawaban</button>
-      <button class="nextBtn" style="display:none;" onclick="nextQuestion()">Lanjut</button>
+      <button class="nextBtn" style="display:none" onclick="nextQuestion()">Lanjut</button>
     </div>
-    <p class="explanation" id="explanationquestion1" style="display:none;"><strong>Penjelasan:</strong> ChatGPT membantu guru brainstorming dan membuat konten ajar, bukan menggantikan guru atau menyusun jadwal.</p>
+    <p id="expq1" class="explanation" style="display:none"><strong>Penjelasan:</strong> Langkah awal selalu menetapkan tujuan dan kompetensi agar materi AI relevan dan terarah.</p>
   </div>
 
   <!-- Soal 2A -->
-  <div class="question" id="question2A">
+  <div class="question" id="q2A">
     <h3>Soal 2 dari 4</h3>
-    <p class="question-text">Fitur Canva AI yang dapat otomatis menyusun layout presentasi adalah …</p>
+    <p class="question-text">Perintah prompt yang tepat untuk membuat 5 soal pilihan ganda adalah …</p>
     <ul class="options">
-      <li><label><input type="radio" name="q2" value="A" data-correct="true"> Magic Design</label></li>
-      <li><label><input type="radio" name="q2" value="B"> Magic Write</label></li>
-      <li><label><input type="radio" name="q2" value="C"> Text-to-Speech</label></li>
+      <li><label><input type="radio" name="a2" value="A" data-correct="true"> “Buatkan 5 soal pilihan ganda untuk topik siklus air kelas 5 SD.”</label></li>
+      <li><label><input type="radio" name="a2" value="B"> “Tuliskan materi lengkap siklus air.”</label></li>
+      <li><label><input type="radio" name="a2" value="C"> “Jelaskan kurikulum Indonesia.”</label></li>
     </ul>
     <div class="btn-container">
       <button class="backBtn" onclick="prevQuestion()">Kembali</button>
       <button class="submitBtn" onclick="checkAnswer()">Periksa Jawaban</button>
-      <button class="nextBtn" style="display:none;" onclick="nextQuestion()">Lanjut</button>
+      <button class="nextBtn" style="display:none" onclick="nextQuestion()">Lanjut</button>
     </div>
-    <p class="explanation" id="explanationquestion2A" style="display:none;"><strong>Penjelasan:</strong> Magic Design menyusun layout otomatis; Magic Write menulis teks.</p>
+    <p id="expq2A" class="explanation" style="display:none"><strong>Penjelasan:</strong> Prompt spesifik menyebut jumlah soal, topik, dan jenjang menghasilkan output yang sesuai.</p>
   </div>
 
   <!-- Soal 2B -->
-  <div class="question" id="question2B">
+  <div class="question" id="q2B">
     <h3>Soal 2 dari 4</h3>
-    <p class="question-text">Manakah yang bukan fitur Canva AI?</p>
+    <p class="question-text">Manakah yang <em>bukan</em> praktik baik saat meminta AI membuat soal?</p>
     <ul class="options">
-      <li><label><input type="radio" name="q2" value="A"> Magic Write</label></li>
-      <li><label><input type="radio" name="q2" value="B"> Magic Design</label></li>
-      <li><label><input type="radio" name="q2" value="C" data-correct="true"> Auto Grade</label></li>
+      <li><label><input type="radio" name="a2" value="A"> Menyebut jenjang dan kompetensi dasar.</label></li>
+      <li><label><input type="radio" name="a2" value="B"> Mengecek ulang hasil AI sebelum digunakan.</label></li>
+      <li><label><input type="radio" name="a2" value="C" data-correct="true"> Menggunakan soal AI tanpa revisi guru.</label></li>
     </ul>
     <div class="btn-container">
       <button class="backBtn" onclick="prevQuestion()">Kembali</button>
       <button class="submitBtn" onclick="checkAnswer()">Periksa Jawaban</button>
-      <button class="nextBtn" style="display:none;" onclick="nextQuestion()">Lanjut</button>
+      <button class="nextBtn" style="display:none" onclick="nextQuestion()">Lanjut</button>
     </div>
-    <p class="explanation" id="explanationquestion2B" style="display:none;"><strong>Penjelasan:</strong> Auto Grade bukan fitur Canva, sedangkan Magic Write dan Magic Design resmi ada.</p>
+    <p id="expq2B" class="explanation" style="display:none"><strong>Penjelasan:</strong> Soal dari AI harus ditinjau dan disesuaikan guru sebelum dipakai.</p>
   </div>
 
   <!-- Soal 3 -->
-  <div class="question" id="question3">
+  <div class="question" id="q3">
     <h3>Soal 3 dari 4</h3>
-    <p class="question-text">True/False: Text-to-Image dapat membuat ilustrasi baru hanya dari deskripsi teks.</p>
+    <p class="question-text">True/False: Text-to-Speech (TTS) AI dapat membantu siswa dengan gaya belajar auditori.</p>
     <ul class="options">
-      <li><label><input type="radio" name="q3" value="true" data-correct="true"> True</label></li>
-      <li><label><input type="radio" name="q3" value="false"> False</label></li>
+      <li><label><input type="radio" name="a3" value="true" data-correct="true"> True</label></li>
+      <li><label><input type="radio" name="a3" value="false"> False</label></li>
     </ul>
     <div class="btn-container">
       <button class="backBtn" onclick="prevQuestion()">Kembali</button>
       <button class="submitBtn" onclick="checkAnswer()">Periksa Jawaban</button>
-      <button class="nextBtn" style="display:none;" onclick="nextQuestion()">Lanjut</button>
+      <button class="nextBtn" style="display:none" onclick="nextQuestion()">Lanjut</button>
     </div>
-    <p class="explanation" id="explanationquestion3" style="display:none;"><strong>Penjelasan:</strong> Text-to-Image seperti DALL·E atau Bing Image Creator memang menghasilkan ilustrasi baru dari prompt teks.</p>
+    <p id="expq3" class="explanation" style="display:none"><strong>Penjelasan:</strong> TTS cocok untuk siswa auditori maupun kebutuhan khusus.</p>
   </div>
 
   <!-- Soal 4 -->
-  <div class="question" id="question4">
+  <div class="question" id="q4">
     <h3>Soal 4 dari 4</h3>
-    <p class="question-text">Guru ingin membuat audio narasi otomatis. Tools yang cocok adalah …</p>
+    <p class="question-text">Hal penting saat memakai konten AI di kelas adalah …</p>
     <ul class="options">
-      <li><label><input type="radio" name="q4" value="A" data-correct="true"> ElevenLabs</label></li>
-      <li><label><input type="radio" name="q4" value="B"> Canva</label></li>
-      <li><label><input type="radio" name="q4" value="C"> ChatGPT</label></li>
+      <li><label><input type="radio" name="a4" value="A" data-correct="true"> Memeriksa hak cipta dan mencantumkan sumber.</label></li>
+      <li><label><input type="radio" name="a4" value="B"> Mempublikasikan apa adanya tanpa revisi.</label></li>
+      <li><label><input type="radio" name="a4" value="C"> Menyimpan konten dan merahasiakannya.</label></li>
     </ul>
     <div class="btn-container">
       <button class="backBtn" onclick="prevQuestion()">Kembali</button>
       <button class="submitBtn" onclick="checkAnswer()">Periksa Jawaban</button>
-      <button class="nextBtn" style="display:none;" onclick="nextQuestion()">Lihat Hasil</button>
+      <button class="nextBtn" style="display:none" onclick="nextQuestion()">Lihat Hasil</button>
     </div>
-    <p class="explanation" id="explanationquestion4" style="display:none;"><strong>Penjelasan:</strong> ElevenLabs (atau Narakeet) adalah tool khusus TTS; Canva dan ChatGPT tidak untuk audio otomatis.</p>
+    <p id="expq4" class="explanation" style="display:none"><strong>Penjelasan:</strong> Etika penting: cek hak cipta, revisi, dan cantumkan atribusi jika perlu.</p>
   </div>
-
 </div>
 
 <!-- Hasil -->
@@ -136,85 +133,68 @@
 </div>
 
 <script>
-  // State
-  let stepIndex = 0;
-  const questionOrder = ['question1'];
-  const answerStatus = [false, false, false, false, false]; // index 1-4
-  const indexMap = { question1:1, question2A:2, question2B:2, question3:3, question4:4 };
+  // state management
+  let step = 0;
+  const order = ['q1'];
+  const ansStatus = [false,false,false,false,false]; // index 1-4
+  const mapIdx = {q1:1,q2A:2,q2B:2,q3:3,q4:4};
 
-  function checkAnswer() {
-    const currentId = questionOrder[stepIndex];
-    const qDiv = document.getElementById(currentId);
-    const name = 'q' + indexMap[currentId];
-    const selected = qDiv.querySelector(`input[name="${name}"]:checked`);
-    if (!selected) { alert('Silakan pilih jawaban terlebih dahulu.'); return; }
-    const isCorrect = selected.dataset.correct === 'true';
-    answerStatus[indexMap[currentId]] = isCorrect;
+  function checkAnswer(){
+    const curId = order[step];
+    const qDiv = document.getElementById(curId);
+    const idx = mapIdx[curId];
+    const selected = qDiv.querySelector(`input[name=a${idx}]:checked`);
+    if(!selected){alert('Silakan pilih jawaban terlebih dahulu.');return;}
+    const correct = selected.dataset.correct==='true';
+    ansStatus[idx]=correct;
 
-    // build branch after Q1
-    if (currentId === 'question1') {
-      const branch = isCorrect ? 'question2A' : 'question2B';
-      questionOrder.push(branch, 'question3', 'question4');
+    if(curId==='q1'){
+      const branch = correct?'q2A':'q2B';
+      order.push(branch,'q3','q4');
     }
 
-    if (!isCorrect) {
-      // show explanation & Next
-      document.getElementById('explanation'+currentId).style.display = 'block';
-      disableOptions(currentId);
-      qDiv.querySelector('.submitBtn').style.display = 'none';
-      qDiv.querySelector('.nextBtn').style.display = 'inline-block';
-    } else {
-      // correct: disable & auto next or show results
-      disableOptions(currentId);
-      if (currentId !== 'question4') nextQuestion();
+    if(!correct){
+      document.getElementById('exp'+curId).style.display='block';
+      disable(curId);
+      qDiv.querySelector('.submitBtn').style.display='none';
+      qDiv.querySelector('.nextBtn').style.display='inline-block';
+    }else{
+      disable(curId);
+      if(curId!=='q4') nextQuestion();
       else showResults();
     }
   }
 
-  function nextQuestion() {
-    // hide current
-    document.getElementById(questionOrder[stepIndex]).classList.remove('active');
-    stepIndex++;
-    const nextId = questionOrder[stepIndex];
-    if (nextId) {
-      document.getElementById(nextId).classList.add('active');
-    } else {
-      showResults();
-    }
+  function nextQuestion(){
+    document.getElementById(order[step]).classList.remove('active');
+    step++;
+    if(step<order.length){document.getElementById(order[step]).classList.add('active');}
+    else showResults();
   }
 
-  function prevQuestion() {
-    document.getElementById(questionOrder[stepIndex]).classList.remove('active');
-    stepIndex = Math.max(0, stepIndex-1);
-    document.getElementById(questionOrder[stepIndex]).classList.add('active');
+  function prevQuestion(){
+    document.getElementById(order[step]).classList.remove('active');
+    step=Math.max(0,step-1);
+    document.getElementById(order[step]).classList.add('active');
   }
 
-  function disableOptions(qId) {
-    document.querySelectorAll(`input[name="q${indexMap[qId]}"]`).forEach(i => i.disabled = true);
+  function disable(id){
+    const idx=mapIdx[id];
+    document.querySelectorAll(`input[name=a${idx}]`).forEach(r=>r.disabled=true);
   }
 
-  function showResults() {
-    // hide all questions
-    document.querySelectorAll('.question').forEach(q => q.classList.remove('active'));
-    // calculate
-    const correctCount = answerStatus.slice(1).filter(v => v).length;
-    const score = Math.round((correctCount/4)*100);
-    document.getElementById('score-text').textContent =
-      `Anda menjawab ${correctCount}/4 benar. Skor Anda: ${score}/100.`;
-    const topics = ['','ChatGPT','Canva AI','Text-to-Image','AI Suara/Video'];
-    const summary = document.getElementById('summary'); summary.innerHTML = '';
-    for (let i=1; i<=4; i++) {
-      const li = document.createElement('li');
-      li.textContent = `Soal ${i} (${topics[i]}): ${answerStatus[i] ? 'Benar' : 'Salah'}`;
-      summary.appendChild(li);
-    }
-    document.getElementById('result').style.display = 'block';
-    // WA button
-    const message = `Halo, ini hasil kuiz AI Bab 3:\n- Benar: ${correctCount}/4\n- Skor: ${score}/100`;
-    const url = `https://wa.me/085337508031?text=${encodeURIComponent(message)}`;
-    const sendBtn = document.getElementById('sendBtn');
-    sendBtn.onclick = () => window.open(url,'_blank');
-    sendBtn.style.display = 'inline-block';
+  function showResults(){
+    document.querySelectorAll('.question').forEach(q=>q.classList.remove('active'));
+    const correctCnt = ansStatus.slice(1).filter(Boolean).length;
+    const score = Math.round((correctCnt/4)*100);
+    document.getElementById('score-text').textContent=`Anda menjawab ${correctCnt}/4 benar. Skor Anda: ${score}/100.`;
+    const topics=['','Merancang Materi','Soal & Evaluasi','Media Visual/Audio','Etika AI'];
+    const sum=document.getElementById('summary');sum.innerHTML='';
+    for(let i=1;i<=4;i++){const li=document.createElement('li');li.textContent=`Soal ${i} (${topics[i]}): ${ansStatus[i]?'Benar':'Salah'}`;sum.appendChild(li);}
+    document.getElementById('result').style.display='block';
+    const msg=`Halo, ini hasil kuiz AI Bab 4:\n- Benar: ${correctCnt}/4\n- Skor: ${score}/100`;
+    const url=`https://wa.me/6285337508031?text=${encodeURIComponent(msg)}`;
+    const btn=document.getElementById('sendBtn');btn.onclick=()=>window.open(url,'_blank');btn.style.display='inline-block';
   }
 </script>
 
